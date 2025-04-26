@@ -15,9 +15,17 @@ function setMode(points) {
 // 問題を作る（モードに応じて点数を変更）
 function generateQuestion() {
   questionPoints = [];
+  const usedX = new Set(); // すでに使ったxを記録するセット
+
   for (let i = 0; i < modePoints; i++) {
-    const x = Math.floor(Math.random() * 5) + 1;
-    const y = x * x + 2;
+    let x;
+    do {
+      x = Math.floor(Math.random() * 11) - 5; // x: -5〜5のランダム
+    } while (usedX.has(x)); // すでに使ったxなら引き直し
+
+    usedX.add(x); // 新しいxを記録
+    const y = x * x + 2; // 例：y = x^2 + 2
+
     questionPoints.push({ x: x, y: y });
   }
 

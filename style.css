@@ -69,3 +69,24 @@ body {
     cursor: pointer;
   }
   
+
+  @media screen and (max-width: 480px) {
+    #formulaInput {
+      width: 60%; /* 入力欄を広げる */
+      font-size: 24px; /* フォントサイズを少し小さく */
+    }
+  
+    .button-grid {
+      grid-template-columns: repeat(4, 60px); /* ボタンサイズ調整 */
+    }
+  
+    .button-grid button {
+      padding: 12px 8px; /* ボタンの大きさを小さくする */
+      font-size: 16px; /* ボタンのフォントサイズを小さく */
+    }
+  
+    .control-buttons button {
+      padding: 12px 24px; /* ボタンを少し大きく */
+      font-size: 16px;
+    }
+  }

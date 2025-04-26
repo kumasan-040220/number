@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>関数パズルゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>関数パズルゲーム</h1>
+
+  <!-- ▼ここにモード選択ボタンを追加！ -->
+  <div class="mode-buttons">
+    <button onclick="setMode(2)">2点モード</button>
+    <button onclick="setMode(3)">3点モード</button>
+  </div>
+
+  <!-- 通ってほしい点をここに表示する -->
+  <div id="questionArea" class="question-area"></div>
+
+  <!-- y= と入力エリア -->
+  <div class="formula-area">
+    <div class="formula-text">y =</div>
+    <input type="text" id="formulaInput" placeholder="式を作ってください">
+  </div>
+
+  <div class="button-grid">
+    <!-- 数字・四則演算・特殊ボタン -->
+    <button onclick="appendFormula('0')">0</button>
+    <button onclick="appendFormula('1')">1</button>
+    <button onclick="appendFormula('2')">2</button>
+    <button onclick="appendFormula('3')">3</button>
+    <button onclick="appendFormula('4')">4</button>
+    <button onclick="appendFormula('5')">5</button>
+    <button onclick="appendFormula('6')">6</button>
+    <button onclick="appendFormula('7')">7</button>
+    <button onclick="appendFormula('8')">8</button>
+    <button onclick="appendFormula('9')">9</button>
+    <button onclick="appendFormula('+')">+</button>
+    <button onclick="appendFormula('-')">-</button>
+    <button onclick="appendFormula('*')">×</button>
+    <button onclick="appendFormula('/')">÷</button>
+    <button onclick="appendFormula('x')">x</button>
+    <button onclick="appendFormula('(')">(</button>
+    <button onclick="appendFormula(')')">)</button>
+    <button onclick="appendFormula('**2')">x²</button>
+    <button onclick="appendFormula('**3')">x³</button>
+    <button onclick="appendFormula('**(1/2)')">√x</button>
+  </div>
+
+  <div class="control-buttons">
+    <button onclick="clearFormula()">クリア</button>
+    <button onclick="submitFormula()">提出</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
